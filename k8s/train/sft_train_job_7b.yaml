@@ -1,0 +1,93 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: clinical-qwen2p5-instruct-sft-no-qwen-traces
+  labels:
+    app: clinical-qwen2p5-instruct-sft-no-qwen-traces
+spec:
+  template:
+    metadata:
+      labels:
+        app: clinical-qwen2p5-instruct-sft-no-qwen-traces
+    spec:
+      containers:
+        - name: clinical-qwen2p5-instruct-sft-no-qwen-traces
+          image: registry.datexis.com/troehr/trl-sft
+
+
+
+          command: [
+            "accelerate", 
+            "launch",
+            "--use_fsdp",
+            "--num_processes", "1",
+            "--config_file", "sft/my_config.yaml",
+            "sft/sft_trainer.py",   
+            "--model_name", "Qwen/Qwen2.5-7B-Instruct",
+            "--dataset_path", "/pvc/data/sft/reasoning/train.parquet",
+            "--output_dir", "/pvc/experiments/sft/qwen_llama_reasoning",
+            "--bf16", "True",
+            "--optim", "adamw_torch",         
+            "--gradient_checkpointing", "True", 
+            "--per_device_train_batch_size", "8",   # 2–4 usually fits per H200 at 7B with gradient checkpointing
+            "--gradient_accumulation_steps", "4",  # adjust to get desired global batch size
+            "--ddp_find_unused_parameters", "False",  # important if using FSDP or custom heads
+            "--learning_rate", "2e-5",             # common for full FT of 7B models; 1e-5–5e-5 range
+            "--lr_scheduler_type", "cosine",     # or "linear"
+            "--warmup_steps", "100",               # or warmup_ratio=0.03
+            "--weight_decay", "0.01",              # regularization
+            "--report_to", "wandb",
+            "--run_name", "qwen2p5-instruct-sft-no-qwen-traces",
+            "--num_train_epochs", "1",
+            "--save_strategy","epoch",
+            "--logging_steps", "5"
+          ]
+          envFrom:
+            - secretRef:
+                name: huggingface-personal-token
+            - secretRef:
+                name: datexis-wandb-api-key
+          env:
+            - name: LANG
+              value: 'C.UTF-8'
+            - name: TOKENIZERS_PARALLELISM
+              value: 'true'
+            - name: NCCL_DEBUG
+              value: 'INFO'
+            - name: HF_HOME
+              value: "/models"
+            - name: HYDRA_FULL_ERROR
+              value: "1"
+            - name: WANDB_ENTITY
+              value: "datexis-phd"
+            - name: WANDB_PROJECT
+              value: "clinical-reasoning-ft"
+          resources:
+            requests:
+              cpu: "1"
+              nvidia.com/gpu: "1"
+            limits:
+              nvidia.com/gpu: "1"
+              memory: 400Gi
+          volumeMounts:
+            - name: dshm
+              mountPath: /dev/shm
+            - name: clinical-r1-pvc
+              mountPath: /pvc
+            - name: model-volume
+              mountPath: /models
+      nodeSelector:
+        gpu: b200
+      volumes:
+        - name: clinical-r1-pvc
+          persistentVolumeClaim:
+            claimName: clinical-r1-pvc
+        - name: model-volume
+          persistentVolumeClaim:
+            claimName: model-volume
+        - name: dshm
+          emptyDir:
+            medium: Memory
+      imagePullSecrets:
+        - name: private-registry-auth
+      restartPolicy: Never
