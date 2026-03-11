@@ -1,0 +1,24 @@
+{
+    "Diseases of the Eye and Adnexa (H00-H59)": {
+      "Glaucoma": {
+        "Assigning Glaucoma Codes": "Assign as many codes from category H40 (Glaucoma) as needed to identify the glaucoma type, the affected eye, and the glaucoma stage.",
+        "Bilateral glaucoma with same type and stage": {
+          "with_bilateral_code_available": "If both eyes have the same type and stage and a bilateral code exists, report only the bilateral glaucoma code with the seventh character for the stage.",
+          "without_bilateral_code_available": "If both eyes have the same type and stage but no bilateral code exists (e.g., subcategories H40.10, H40.20), report a single code for the glaucoma type with the appropriate seventh character for the stage."
+        },
+        "Bilateral glaucoma stage with different types or stages": {
+          "laterality_distinguished": "If each eye has a different type or stage and the classification distinguishes laterality, assign the appropriate code for each eye rather than a bilateral code.",
+          "laterality_not_distinguished_different_types": "If each eye has a different type and the classification does not distinguish laterality (e.g., H40.10, H40.20), assign one code for each glaucoma type with the appropriate seventh character for the stage.",
+          "laterality_not_distinguished_same_type_different_stage": "If each eye has the same type but different stage and the classification does not distinguish laterality (e.g., H40.10, H40.20), assign a code for the glaucoma type for each eye with the eye-specific seventh character for the documented stage."
+        },
+        "Patient admitted with glaucoma and stage evolves during the admission": "If the stage progresses during the admission, assign the code for the highest stage documented.",
+        "Indeterminate stage glaucoma": "Use seventh character \"4\" (indeterminate stage) when the stage cannot be clinically determined based on documentation. Do not confuse with seventh character \"0\" (unspecified) which is used when there is no documentation regarding the stage."
+      },
+      "Blindness": {
+        "both_eyes_category_not_documented": "If blindness/low vision of both eyes is documented but the visual impairment category is not documented, assign H54.3 (Unqualified visual loss, both eyes).",
+        "one_eye_category_not_documented": "If blindness/low vision in one eye is documented but the visual impairment category is not documented, assign a code from H54.6- (Unqualified visual loss, one eye).",
+        "affected_eye_not_specified": "The source text is truncated after 'assign'; the specific instruction/code is not provided in the excerpt."
+      }
+    }
+  }
+  

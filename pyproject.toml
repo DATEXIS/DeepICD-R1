@@ -1,0 +1,52 @@
+[project]
+name = "deep-icd-r1"
+version = "0.1.0"
+description = "Reinforcement learning for prospective ICD-10 clinical coding using GRPO and structured reasoning traces"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.12"
+authors = [
+    { name = "DATEXIS", email = "datexis@beuth-hochschule.de" }
+]
+keywords = ["clinical NLP", "ICD coding", "reinforcement learning", "GRPO", "reasoning", "MIMIC"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "vllm",
+    "datasets",
+    "torch",
+    "transformers",
+    "meilisearch",
+    "wandb",
+]
+
+[project.optional-dependencies]
+unsloth = ["unsloth"]
+evaluate = [
+    "torchmetrics",
+    "matplotlib",
+    "plotly",
+]
+test = ["pytest"]
+trl = ["trl"]
+verl = ["verl", "flash-attn"]  # highly complex build; use the provided Dockerfile_train
+sft = [
+    "peft>=0.16.0",
+    "PyYAML>=6.0.2",
+]
+
+[project.urls]
+Repository = "https://github.com/DATEXIS/DeepICD-R1"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["test"]

@@ -1,0 +1,78 @@
+{
+    "Certain Conditions Originating in the Perinatal Period (P00-P96)": {
+      "Definition": "Perinatal period = before birth through the 28th day following birth.",
+      "General Perinatal Rules": {
+        "Use of Chapter 16 Codes": {
+          "rule": "Never used on maternal record; Chapter 15 codes never used on newborn record.",
+          "lifelong_use": "May be used throughout life if condition persists."
+        },
+        "Principal Diagnosis for Birth Record": {
+          "rule": "Assign Z38 code as principal for birth episode; used only once at birth and only on newborn record.",
+          "transfer_rule": "Do not use Z38 at receiving hospital for transferred newborn."
+        },
+        "Use of Codes from other Chapters with Chapter 16 Codes": {
+          "rule": "Allowed if provides more specific detail.",
+          "sequencing": "If reason for encounter is perinatal condition, Chapter 16 code is sequenced first."
+        },
+        "Use of Chapter 16 Codes after the Perinatal Period": "Continue using perinatal code regardless of age if condition originated in perinatal period.",
+        "Birth process or community acquired conditions": {
+          "rule": "If unclear, default to birth process and assign Chapter 16 code.",
+          "exception": "If clearly community-acquired, do not assign Chapter 16 code.",
+          "covid_reference": "For COVID-19, see I.C.16.h."
+        },
+        "Code all clinically significant conditions": {
+          "criteria": [
+            "Requires clinical evaluation",
+            "Requires therapeutic treatment",
+            "Requires diagnostic procedures",
+            "Prolongs hospital stay",
+            "Increases nursing care/monitoring",
+            "Has implications for future health care needs"
+          ]
+        }
+      },
+      "Observation and Evaluation of Newborns for Suspected Conditions not Found": {
+        "Use of Z05 codes": {
+          "rule": "Assign Z05 if healthy newborn evaluated for suspected condition ruled out.",
+          "exclusion": "Do not use if signs/symptoms present — code the sign/symptom instead."
+        },
+        "Z05 on other than the birth record": "May be principal/first-listed for readmissions when Z38 no longer applies; only for healthy newborns with no confirmed condition.",
+        "Z05 on a birth record": "Use as secondary after Z38."
+      },
+      "Coding Additional Perinatal Diagnoses": {
+        "Conditions requiring treatment": "Assign codes for conditions requiring treatment, investigation, longer stay, or resource use.",
+        "Implications for future health care needs": "Assign if provider documents such implications (not applicable for adults)."
+      },
+      "Prematurity and Fetal Growth Retardation": {
+        "rule": "Assign only if documented.",
+        "categories": {
+          "P05": "Slow fetal growth/fetal malnutrition",
+          "P07": "Short gestation/low birth weight"
+        },
+        "based_on": "Recorded birth weight and estimated gestational age.",
+        "dual_coding": "If both available, assign two P07 codes (birth weight first, then gestational age)."
+      },
+      "Low birth weight and immaturity status": {
+        "rule": "P07 codes may be used for any age if prematurity/low birth weight affects current health.",
+        "reference": "See I.C.21 for status codes."
+      },
+      "Bacterial Sepsis of Newborn": {
+        "rule": "Category P36 includes congenital sepsis; default to congenital if not specified.",
+        "causal_organism": {
+          "included_in_code": "Do not assign B95-B96 if organism in P36 code.",
+          "not_included_in_code": "Assign additional B96 code."
+        },
+        "additional_codes": "Add R65.2- and organ dysfunction codes if severe."
+      },
+      "Stillbirth": {
+        "code": "P95 only in institutions with separate stillbirth records.",
+        "restrictions": "No other code with P95; do not use on mother's record."
+      },
+      "COVID-19 Infection in Newborn": {
+        "default": "If no transmission type documented, assign U07.1 and manifestation codes.",
+        "in_utero_or_birth": "If documented as contracted in utero/birth, assign P35.8 + U07.1.",
+        "birth_episode": "Always assign appropriate Z38 as principal for birth episode."
+      }
+    }
+  }
+  

@@ -1,0 +1,58 @@
+{
+    "Mental, Behavioral and Neurodevelopmental disorders (F01 – F99)": {
+      "Pain disorders related to psychological factors": {
+        "description": "Guidance for coding pain disorders with psychological components.",
+        "F45.41": "Assign for pain exclusively related to psychological disorders. Per Excludes 1 under G89, do not assign a G89 code with F45.41.",
+        "F45.42 with G89": "Use F45.42 with a code from category G89 (Pain, NEC) when documentation shows a psychological component in a patient with acute or chronic pain.",
+        "See also": "Section I.C.6. Pain"
+      },
+      "Mental and behavioral disorders due to psychoactive substance use": {
+        "description": "Coding rules for categories F10–F19.",
+        "In Remission": {
+          "description": "Selection of remission codes (e.g., -.11, -.21, -.91 under F10–F19) requires provider clinical judgment and is based on provider documentation unless otherwise instructed.",
+          "mapping": "Mild SUD in early/sustained remission → substance abuse in remission codes; Moderate/severe SUD in early/sustained remission → substance dependence in remission codes."
+        },
+        "Psychoactive Substance Use, Abuse and Dependence": {
+          "description": "When documentation mentions multiple patterns for the same substance, assign only one code per the hierarchy.",
+          "hierarchy": [
+            "If both use and abuse are documented → assign abuse only.",
+            "If both abuse and dependence are documented → assign dependence only.",
+            "If use, abuse, and dependence are all documented → assign dependence only.",
+            "If both use and dependence are documented → assign dependence only."
+          ]
+        },
+        "Psychoactive Substance Use, Unspecified": {
+          "codes": "F10.9-, F11.9-, F12.9-, F13.9-, F14.9-, F15.9-, F16.9-, F18.9-, F19.9-",
+          "usage": "Assign only when they meet the definition of a reportable diagnosis and documentation shows the use is associated with a substance-related disorder (Chapter 5) or a medical condition, with the relationship documented by the provider.",
+          "reference": "See Section III, Reporting Additional Diagnoses."
+        },
+        "Medical Conditions Due to Psychoactive Substance Use, Abuse and Dependence": {
+          "classification": "Medical conditions due to substance use/abuse/dependence are not substance-induced disorders.",
+          "coding": "Assign the code for the medical condition (per Alphabetical Index) plus the appropriate F1x use/abuse/dependence code.",
+          "example": "Alcoholic pancreatitis due to alcohol dependence → K85.2- (Alcohol-induced acute pancreatitis) + F10.20 (Alcohol dependence, uncomplicated); do NOT assign F10.288."
+        },
+        "Blood Alcohol Level": {
+          "Y90": "A Y90 code may be assigned when blood alcohol level is documented and the provider has documented a condition classifiable to F10 (Alcohol-related disorders).",
+          "documentation": "Blood alcohol level need not be documented by the patient’s provider.",
+          "reference": "See Section I.B.14. for blood alcohol level documentation by clinicians other than the patient's provider."
+        }
+      },
+      "Factitious Disorder": {
+        "description": "Coding for factitious disorders (imposed on self and by proxy).",
+        "Factitious disorder imposed on self (Munchausen’s syndrome)": "Assign appropriate code from F68.1- (Factitious disorder imposed on self).",
+        "Factitious disorder imposed on another (Munchausen’s by proxy)": {
+          "perpetrator": "Assign F68.A (Factitious disorder imposed on another) to the perpetrator’s record.",
+          "victim": "Assign appropriate code from T74 (confirmed) or T76 (suspected) for adult/child abuse, neglect, or other maltreatment.",
+          "reference": "See Section I.C.19.f. Adult and child abuse, neglect and other maltreatment."
+        }
+      },
+      "Dementia": {
+        "description": "Classification and severity coding for dementia.",
+        "categories": "F01, F02, F03 classified by etiology and severity (unspecified, mild, moderate, severe).",
+        "severity_selection": "Requires provider clinical judgment and is assigned based on provider documentation unless otherwise instructed by classification.",
+        "unspecified_severity": "If severity is not documented, assign the appropriate code for unspecified severity.",
+        "progression_during_stay": "If admitted at one severity level and progresses to higher severity in an inpatient setting, assign one code for the highest severity level reported during the stay."
+      }
+    }
+  }
+  

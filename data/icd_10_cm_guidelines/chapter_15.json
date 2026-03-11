@@ -1,0 +1,116 @@
+{
+    "Pregnancy, Childbirth, and the Puerperium (O00-O9A)": {
+      "General Rules for Obstetric Cases": {
+        "Codes from chapter 15 and sequencing priority": {
+          "rule": "Chapter 15 codes (O00-O9A) have sequencing priority over other chapters.",
+          "incidental_pregnancy": "If pregnancy is incidental, use Z33.1 instead of Chapter 15 codes."
+        },
+        "Chapter 15 codes used only on the maternal record": "Never assign Chapter 15 codes on newborn records.",
+        "Final character for trimester": {
+          "rule": "Most Chapter 15 codes have a final character for trimester based on provider documentation of trimester or weeks.",
+          "childbirth_option": "If delivery occurs and an 'in childbirth' code is available, assign it."
+        },
+        "Selection of trimester for inpatient admissions spanning trimesters": "Assign trimester based on when complication developed or admission occurred for pre-existing conditions.",
+        "Unspecified trimester": "Use only when trimester cannot be determined and clarification is not possible.",
+        "7th character for fetus identification": {
+          "applies_to": ["O31", "O32", "O33.3-O33.6", "O35", "O36", "O40", "O41", "O60.1", "O60.2", "O64", "O69"],
+          "rules": [
+            "Assign '0' for single gestations.",
+            "Assign '0' if fetus affected cannot be determined clinically or by documentation."
+          ]
+        },
+        "Completed weeks of gestation": "Use full completed weeks; e.g., 39 weeks and 6 days = 39 weeks."
+      },
+      "Selection of OB Principal or First-listed Diagnosis": {
+        "Routine outpatient prenatal visits": "Use Z34 for normal pregnancy supervision; do not use with Chapter 15 codes.",
+        "Supervision of High-Risk Pregnancy": {
+          "prenatal_only": "O09 is for prenatal period only.",
+          "labor_delivery": "If complications occur, assign applicable Chapter 15 codes; otherwise use O80."
+        },
+        "Episodes when no delivery occurs": "Principal diagnosis = main complication necessitating encounter.",
+        "When a delivery occurs": {
+          "rule": "Principal diagnosis is the condition most related to the delivery.",
+          "cesarean_rule": "If cesarean performed due to a condition, that condition is principal."
+        },
+        "Outcome of delivery": "Assign a Z37 code for every maternal record with delivery."
+      },
+      "Pre-existing conditions versus conditions due to pregnancy": {
+        "rule": "Determine if condition existed prior to pregnancy or developed during pregnancy for correct coding.",
+        "mixed_categories": "Some categories do not distinguish and may be used for either."
+      },
+      "Pre-existing hypertension in pregnancy": {
+        "rule": "O10 includes hypertensive heart and kidney disease.",
+        "secondary_code": "Add secondary hypertension code to specify type of heart failure or CKD."
+      },
+      "Fetal Conditions Affecting the Management of the Mother": {
+        "O35_O36_usage": "Assign only if fetal condition affects maternal management.",
+        "in_utero_surgery": "Assign O35 with procedure code; do not use Chapter 16 codes on maternal record."
+      },
+      "HIV Infection in Pregnancy, Childbirth, and the Puerperium": {
+        "HIV_related_illness": "Principal = O98.7-, followed by illness codes.",
+        "asymptomatic": "O98.7- + Z21."
+      },
+      "Diabetes mellitus in pregnancy": "Assign O24 first, followed by E08-E13 diabetes codes.",
+      "Long term use of insulin and oral hypoglycemics": "See I.C.4.a.3.",
+      "Gestational (pregnancy induced) diabetes": {
+        "subcategory": "O24.4",
+        "exclusions": "No other O24 codes with O24.4.",
+        "control_types": {
+          "diet_and_insulin": "Assign only insulin-controlled code.",
+          "diet_and_oral": "Assign only oral-controlled code."
+        },
+        "do_not_assign": ["Z79.4", "Z79.84", "Z79.85"],
+        "abnormal_glucose": "Use O99.81."
+      },
+      "Sepsis and septic shock complicating pregnancy": {
+        "rule": "Assign Chapter 15 sepsis code + infection code; add R65.2- and organ dysfunction codes if severe."
+      },
+      "Puerperal sepsis": {
+        "code": "O85 + organism code (B95-B96).",
+        "do_not_use": ["A40", "A41"],
+        "additional": "Add R65.2- if severe."
+      },
+      "Alcohol, tobacco and drug use in pregnancy": {
+        "alcohol": "O99.31 + F10 manifestation codes.",
+        "tobacco": "O99.33 + F17 code.",
+        "drug": "O99.32 + F11-F16, F18-F19 codes."
+      },
+      "Poisoning, toxic effects, adverse effects, underdosing in pregnancy": {
+        "sequence": "O9A.2 first, then poisoning/toxic effect/adverse effect/underdosing code, then condition caused."
+      },
+      "Normal Delivery, Code O80": {
+        "criteria": "Full-term single healthy infant, no complications.",
+        "resolved_complication": "O80 can be used if prior complication resolved.",
+        "outcome": "Only Z37.0 allowed with O80."
+      },
+      "The Peripartum and Postpartum Periods": {
+        "definitions": {
+          "postpartum": "6 weeks after delivery.",
+          "peripartum": "Last month of pregnancy to 5 months postpartum."
+        },
+        "complications": "Postpartum complication = any complication within 6 weeks.",
+        "after_6_weeks": "Chapter 15 codes may be used if condition is documented as pregnancy-related.",
+        "post_outside_hospital": "Use Z39.0 if routine postpartum care after out-of-hospital delivery.",
+        "pregnancy_cardiomyopathy": "O90.3 for cardiomyopathy due to pregnancy in patients without pre-existing heart disease."
+      },
+      "Code O94, Sequelae of complication": {
+        "usage": "Use for sequelae after initial complication.",
+        "timing": "May be used anytime after postpartum period.",
+        "sequence": "Follow sequela code with code for sequela condition."
+      },
+      "Termination of Pregnancy and Spontaneous abortions": {
+        "liveborn_fetus": "Z33.2 + Z37 code.",
+        "retained_products": "O03.4 or O07.4 unless specific complication code applies.",
+        "complications": "Use Chapter 15 complication codes with O04, O07, O08.",
+        "post_abortion_hemorrhage": "O04.6 (not O72.1)."
+      },
+      "Abuse in a pregnant patient": {
+        "rule": "O9A.3-O9A.5 first, then injury/abuse perpetrator codes."
+      },
+      "COVID-19 infection in pregnancy": {
+        "principal_covid": "O98.5- first, then U07.1 + manifestation codes if COVID-19 is admission reason.",
+        "incidental_covid": "Principal = unrelated reason; O98.5-, U07.1, and manifestations as additional."
+      }
+    }
+  }
+  

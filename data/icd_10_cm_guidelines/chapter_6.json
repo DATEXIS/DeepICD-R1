@@ -1,0 +1,59 @@
+{
+    "Diseases of the Nervous System (G00-G99)": {
+      "Dominant/nondominant side": {
+        "description": "Category G81 (Hemiplegia and hemiparesis) and subcategories G83.1 (Monoplegia of lower limb), G83.2 (Monoplegia of upper limb), and G83.3 (Monoplegia, unspecified) identify dominance of the affected side.",
+        "defaults_when_dominance_unspecified": [
+          "Ambidextrous patient → default to dominant.",
+          "Left side affected → default to non-dominant.",
+          "Right side affected → default to dominant."
+        ]
+      },
+      "Pain - Category G89": {
+        "General coding information": {
+          "rules": [
+            "Codes in G89 (Pain, not elsewhere classified) may be used with other codes to add detail about acute/chronic or neoplasm-related pain, unless noted otherwise.",
+            "Do not assign G89 codes if pain is not specified as acute/chronic, post-thoracotomy, postprocedural, or neoplasm-related.",
+            "Do not assign a G89 code if the underlying (definitive) diagnosis is known, unless the encounter is for pain control/management rather than management of the underlying condition.",
+            "If the admission/encounter is for a procedure to treat the underlying condition (e.g., spinal fusion, kyphoplasty), assign the underlying condition as principal diagnosis; do not assign a G89 code."
+          ],
+          "Category G89 Codes as Principal or First-Listed Diagnosis": [
+            "When pain control/management is the reason for the admission/encounter. Report the underlying cause of pain as an additional diagnosis, if known.",
+            "When admitted for insertion of a neurostimulator for pain control: assign the appropriate pain code as principal/first-listed. If a neurostimulator is inserted during an admission primarily for treating the underlying condition, assign the underlying condition as principal and the pain code as secondary."
+          ],
+          "Use of Category G89 Codes in Conjunction with Site Specific Pain Codes": {
+            "Assigning Category G89 and Site-Specific Pain Codes": "Use G89 codes with site-of-pain codes (including Chapter 18) if G89 adds information (e.g., acuity) not captured by the site code.",
+            "Sequencing of Category G89 Codes with Site-Specific Pain Codes": [
+              "Encounter for pain control/management → list G89 code first, followed by site-of-pain code (e.g., G89.11 then M54.2 for acute neck pain due to trauma).",
+              "Encounter for other reasons and no definitive diagnosis established → list site-of-pain code first, then the appropriate G89 code."
+            ]
+          }
+        },
+        "Pain due to devices, implants and grafts": {
+          "reference": "See Section I.C.19. Pain due to medical devices."
+        },
+        "Postoperative Pain": {
+          "documentation_guidance": [
+            "Use provider documentation; also see Section III (Reporting Additional Diagnoses) and Section IV (Outpatient Coding/Reporting).",
+            "Default for post-thoracotomy and other postoperative pain not specified as acute or chronic is the acute form.",
+            "Do not code routine/expected postoperative pain immediately after surgery."
+          ],
+          "Postoperative pain not associated with specific postoperative complication": "Assign appropriate postoperative pain code in category G89.",
+          "Postoperative pain associated with specific postoperative complication": "Assign code(s) from Chapter 19 for the complication (e.g., painful wire sutures). If appropriate, add G89.18 (other acute postprocedural pain) or G89.28 (other chronic postprocedural pain)."
+        },
+        "Chronic pain": "Classified to subcategory G89.2. No fixed time frame defines chronic pain; rely on provider documentation.",
+        "Neoplasm Related Pain": {
+          "coding": [
+            "Assign G89.3 for pain documented as related/associated/due to cancer, malignancy (primary or secondary), or tumor—regardless of acuity.",
+            "G89.3 may be principal/first-listed when the reason for admission/encounter is pain control/management; list the underlying neoplasm as an additional diagnosis.",
+            "If the reason for admission/encounter is management of the neoplasm and pain is also documented, assign G89.3 as an additional diagnosis. No additional site-of-pain code is required.",
+            "See Section I.C.2. for sequencing neoplasms for other admission reasons (except pain control/management)."
+          ]
+        },
+        "Chronic pain syndrome": {
+          "note": "Central pain syndrome (G89.0) and chronic pain syndrome (G89.4) differ from the term 'chronic pain' and should only be coded when specifically documented by the provider.",
+          "reference": "See Section I.C.5. Pain disorders related to psychological factors."
+        }
+      }
+    }
+  }
+  

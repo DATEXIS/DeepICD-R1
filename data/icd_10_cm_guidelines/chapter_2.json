@@ -1,0 +1,37 @@
+{
+    "Neoplasms (C00-D49)": {
+
+        "Description": "Chapter 2 of the ICD-10-CM contains codes for most benign and all malignant neoplasms. Some benign neoplasms may appear in body system-specific chapters. Correct coding requires determining if the neoplasm is benign, in-situ, malignant, or of uncertain behavior. For malignant neoplasms, secondary (metastatic) sites should also be identified.",
+      
+        "Anemia associated with malignancy": "Malignancy first, then anemia (D63.0).",
+        "Anemia due to chemotherapy/immunotherapy": "Anemia first, then neoplasm and adverse effect code (T45.1X5-).",
+        "Anemia due to radiotherapy": "Anemia first, then neoplasm and Y84.2.",
+        "Management of dehydration due to malignancy": "Dehydration first, then malignancy.",
+        "Treatment of complication from surgical procedure": "List complication first if treatment is for it.",
+        "Primary malignancy previously excised": "Use Z85 code for history; secondary site becomes principal if present.",
+        "Episode of care involves surgical removal of neoplasm": "If surgery + adjunct therapy in same stay — neoplasm is principal diagnosis.",
+        "Patient admission chiefly for administration of therapy": "Use Z51.0, Z51.11, or Z51.12 as principal; malignancy is secondary.",
+        "Complications during therapy": "Therapy code is principal, followed by complication codes.",
+        "Admission/encounter to determine extent of malignancy": "Malignancy or metastatic site is principal diagnosis.",
+        "Symptoms, signs, and abnormal findings associated with neoplasms": "Cannot replace malignancy as principal diagnosis.",
+        "Admission/encounter for pain control/management": "See Section I.C.6.",
+        "Malignancy in two or more noncontiguous sites": "Clarify with provider if different primaries or metastases.",
+        "Disseminated malignant neoplasm, unspecified": "Use C80.0 only if no primary or secondary sites are known.",
+        "Malignant neoplasm without specification of site": "Use C80.1 only when primary site cannot be determined.",
+        "Encounter for treatment of primary malignancy": "Primary first, then metastatic sites.",
+        "Encounter for treatment of secondary malignancy": "Secondary first, then primary.",
+        "Malignant neoplasm in pregnancy": "O9A.1- first, then neoplasm code.",
+        "Complication associated with a neoplasm": "Complication first, then neoplasm (except anemia — malignancy first, then D63.0).",
+        "Complication from surgery": "Complication first; determine if neoplasm code also applies.",
+        "Pathologic fracture due to neoplasm": "If fracture treatment is focus, M84.5 first; if neoplasm is focus, neoplasm first.",
+        "Current malignancy versus personal history of malignancy": "Primary malignancy code used until treatment completed; Z85 codes afterward.",
+        "Leukemia, Multiple Myeloma, and Malignant Plasma Cell Neoplasms in remission versus personal history": "Remission status must be documented; otherwise query provider.",
+        "Aftercare following surgery for neoplasm": "See Section I.C.21.",
+        "Follow-up care for completed treatment of a malignancy": "See Section I.C.21.",
+        "Prophylactic organ removal for prevention of malignancy": "See Section I.C.21.",
+        "Malignant neoplasm associated with transplanted organ": "T86.- first, then C80.2, then malignancy code.",
+        "Breast Implant Associated Anaplastic Large Cell Lymphoma": "Use C84.7A (active) or C84.7B (in remission); do not assign Chapter 19 complication code.",
+        "Secondary malignant neoplasm of lymphoid tissue": "Code from C81–C85 with extranodal site final character instead of coding the solid organ."  
+    }
+  }
+  

@@ -1,0 +1,49 @@
+{
+    "Symptoms, signs, and abnormal clinical and laboratory findings, not elsewhere classified (R00-R99)": {
+      "Scope": "Includes symptoms, signs, abnormal results, and ill-defined conditions with no diagnosis classifiable elsewhere. Signs/symptoms pointing to a specific diagnosis are classified in other chapters.",
+      "a. Use of symptom codes": {
+        "rule": "Use symptom/sign codes when a related definitive diagnosis has not been established by the provider."
+      },
+      "b. Use of a symptom code with a definitive diagnosis code": {
+        "rule": "May report signs/symptoms in addition to definitive diagnosis when they are not routinely associated with that diagnosis (e.g., complex syndromes). Sequence definitive diagnosis first.",
+        "exception": "Do not code signs/symptoms routinely associated with the disease process unless instructed."
+      },
+      "c. Combination codes that include symptoms": {
+        "rule": "When using a combination code for diagnosis and common symptoms, do not assign an additional symptom code."
+      },
+      "d. Repeated falls": {
+        "R29.6": "Use when patient has recently fallen and reason is being investigated.",
+        "Z91.81": "Use when patient has history of falling and is at risk for future falls.",
+        "note": "Both codes may be used together when appropriate."
+      },
+      "e. Coma": {
+        "R40.20": "Use when cause of coma is unknown or due to TBI and coma scale not documented.",
+        "restrictions": "Do not use unspecified coma or coma scale codes for medically induced coma or sedated patients.",
+        "1) Coma Scale": {
+          "usage": "May be used with TBI codes; cannot be used with R40.2A.",
+          "sequence": "Assign after diagnosis codes.",
+          "coding": "One code from each subcategory; 7th character indicates when recorded and must match.",
+          "reporting": "At minimum, report initial score at presentation (may be from EMT or ER).",
+          "R40.24-": "Use when only total score is documented.",
+          "timing": "If multiple scores in first 24 hours, code only score at admission."
+        }
+      },
+      "f. Functional quadriplegia": {
+        "note": "Guideline deleted effective October 1, 2017."
+      },
+      "g. SIRS due to Non-Infectious Process": {
+        "rule": "Assign code for underlying condition first, then R65.10 (without organ dysfunction) or R65.11 (with organ dysfunction).",
+        "additional": "Assign codes for specific organ dysfunction(s) when present.",
+        "query": "If cause of organ dysfunction is unclear, query provider."
+      },
+      "h. Death NOS": {
+        "R99": "Use only when patient is brought in already deceased and pronounced dead on arrival. Not for discharge disposition."
+      },
+      "i. NIHSS Stroke Scale": {
+        "usage": "Use with acute stroke codes (I60-I63) to indicate neurological status/severity.",
+        "sequence": "Assign after acute stroke code(s).",
+        "reporting": "At minimum, report initial score; multiple scores optional."
+      }
+    }
+  }
+  

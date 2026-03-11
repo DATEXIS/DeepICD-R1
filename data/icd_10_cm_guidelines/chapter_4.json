@@ -1,0 +1,38 @@
+{
+    "Endocrine, Nutritional, and Metabolic Diseases (E00-E89)": {
+      "Diabetes mellitus": {
+        "description": "Diabetes mellitus codes are combination codes including the type of diabetes mellitus, the body system affected, and the complications affecting that system. Assign as many codes from E08–E13 as needed to identify all associated conditions, sequenced based on the encounter reason.",
+        "Type of diabetes": {
+          "description": "Age is not the sole determining factor; most type 1 cases develop before puberty and are referred to as juvenile diabetes.",
+          "Presymptomatic Type 1 Diabetes Mellitus": "Codes E10.A- are assigned for early-stage type 1 diabetes that predates symptom onset."
+        },
+        "Type of diabetes mellitus not documented": "If the type is not documented, default to E11.-, Type 2 diabetes mellitus.",
+        "Diabetes mellitus and the use of insulin, oral hypoglycemics, and injectable non-insulin drugs": {
+          "description": "If type is not documented but insulin use is noted, assign E11.-. Also assign Z79 codes for long-term use of insulin, oral drugs, or injectable non-insulin drugs as appropriate. Do not assign Z79.4 for temporary insulin use during an encounter.",
+          "Combination therapy (oral + insulin)": "Assign Z79.4 and Z79.84.",
+          "Combination therapy (insulin + injectable non-insulin drug)": "Assign Z79.4 and Z79.85.",
+          "Combination therapy (oral + injectable non-insulin drug)": "Assign Z79.84 and Z79.85."
+        },
+        "Diabetes mellitus in pregnancy and gestational diabetes": "See Section I.C.15 for diabetes mellitus and gestational (pregnancy-induced) diabetes coding.",
+        "Complications due to insulin pump malfunction": {
+          "Underdose": "Assign T85.6- for pump malfunction type, followed by T38.3X6-. Add codes for type of diabetes and related complications.",
+          "Overdose": "Assign T85.6- for pump malfunction type, followed by T38.3X1-."
+        },
+        "Secondary diabetes mellitus": {
+          "description": "Categories E08, E09, and E13 identify complications and manifestations of secondary diabetes. Always caused by another condition or event.",
+          "Secondary diabetes mellitus and the use of insulin, oral hypoglycemic drugs, or injectable non-insulin drugs": {
+            "description": "Assign Z79 codes for long-term use as appropriate. Do not assign Z79.4 for temporary insulin use.",
+            "Combination therapy (oral + insulin)": "Assign Z79.4 and Z79.84.",
+            "Combination therapy (insulin + injectable non-insulin drug)": "Assign Z79.4 and Z79.85.",
+            "Combination therapy (oral + injectable non-insulin drug)": "Assign Z79.84 and Z79.85."
+          },
+          "Assigning and sequencing secondary diabetes codes and its causes": {
+            "description": "Follow Tabular List instructions for categories E08, E09, and E13.",
+            "Secondary diabetes mellitus due to pancreatectomy": "Assign E89.1 as principal/first-listed, E13 code, and Z90.41 as additional code.",
+            "Secondary diabetes due to drugs": "May be caused by adverse effects, poisoning, or sequelae. See Section I.C.19.e and I.C.20 for coding."
+          }
+        }
+      }
+    }
+}
+  

@@ -1,0 +1,125 @@
+{
+    "Injury, poisoning, and certain other consequences of external causes (S00-T88)": {
+      "Application of 7th Characters in Chapter 19": {
+        "overview": "Most Chapter 19 categories require a 7th character (A, D, S). Traumatic fractures have additional 7th character options.",
+        "assignment_basis": "Assign based on whether the patient is receiving active treatment, not on whether the provider is new.",
+        "complication_codes_active_treatment": "Active treatment refers to treatment for the condition described by the code (e.g., T84.50XA for prosthetic joint infection while being actively treated).",
+        "A - initial encounter": "Use for each encounter where the patient is receiving active treatment for the condition.",
+        "D - subsequent encounter": "Use after active treatment is completed and the patient is receiving routine care during healing/recovery.",
+        "aftercare_Z_codes": "Do not use aftercare Z codes for injuries/poisonings when 7th characters identify subsequent care; instead use the acute injury code with 7th character 'D'.",
+        "S - sequela": "Use for complications/conditions that arise as a direct result of a prior condition. Sequence the sequela (e.g., scar) first, followed by the injury code with 7th character 'S'.",
+        "reference": "See Section I.B.10. Sequelae (Late Effects)."
+      },
+      "Coding of Injuries": {
+        "separate_codes": "Assign separate codes for each injury unless a combination code exists.",
+        "avoid_T07_in_inpatient": "Do not assign T07 (Unspecified multiple injuries) in inpatient settings unless no specific information is available.",
+        "exclude_normal_surgical_wounds": "Do not use traumatic injury codes (S00–T14.9) for normal, healing surgical wounds or complications of surgical wounds.",
+        "sequencing": "Sequence the most serious injury first, as determined by the provider and focus of treatment.",
+        "Superficial injuries": "Do not code superficial injuries (abrasions/contusions) when associated with more severe injuries of the same site.",
+        "Primary injury with damage to nerves/blood vessels": "Sequence the primary injury first, then add codes for nerve (e.g., S04) and/or vessel (e.g., S15) injuries. If the primary injury is to nerves or vessels, sequence that first.",
+        "Iatrogenic injuries": "Do not assign injury codes for injuries occurring during/as a result of medical intervention; assign appropriate complication codes."
+      },
+      "Coding of Traumatic Fractures": {
+        "multiple_coding_principles": "Follow multiple-coding principles; code specified sites individually per S02, S12, S22, S32, S42, S49, S52, S59, S62, S72, S79, S82, S89, S92 and documentation detail.",
+        "defaults": "If not indicated, default to closed fracture and displaced fracture.",
+        "Initial vs. subsequent encounter for fractures": {
+          "initial": "Use appropriate 7th character for initial encounter (A/B/C) for active treatment, including delayed presentation/nonunion initially treated.",
+          "subsequent": "Use appropriate 7th character for subsequent care after active treatment during healing/recovery.",
+          "surgical_complications": "Complications during healing after fracture repair are coded with appropriate complication codes.",
+          "malunion_nonunion": "Report subsequent care with nonunion (K, M, N) or malunion (P, Q, R). If treatment was delayed for the fracture/nonunion, assign initial-encounter 7th character.",
+          "Gustilo_open_fracture": "For forearm, femur, lower leg/ankle, if Gustilo type not specified, assign 7th character for type I or II (B, E, H, M, Q).",
+          "osteoporosis_fracture": "Use M80 (not traumatic fracture code) for fractures in patients with known osteoporosis when mechanism would not fracture healthy bone.",
+          "aftercare": "Do not use aftercare Z codes; assign acute fracture code with appropriate 7th character for aftercare of traumatic fractures.",
+          "references": ["See Section I.C.13. Osteoporosis."]
+        },
+        "Multiple fractures sequencing": "Sequence based on severity of fractures.",
+        "Physeal fractures": "Assign only the code identifying the physeal fracture type; do not add a separate specific bone code."
+      },
+      "Coding of Burns and Corrosions": {
+        "definitions": "Burns: thermal (except sunburn), electricity, radiation. Corrosions: chemical burns. Same guidelines apply.",
+        "classification": "Current burns (T20–T25) classified by depth, extent, and agent (external cause). Eye/internal organ burns (T26–T28) classified by site only.",
+        "depth_levels": ["First degree (erythema)", "Second degree (blistering)", "Third degree (full-thickness)"],
+        "Sequencing of burn and related condition codes": {
+          "highest_degree_first": "Sequence the highest-degree burn first when multiple burns are present.",
+          "external_multiple_burns": "For treatment of external multiple burns, sequence highest-degree burn first.",
+          "internal_vs_external": "When both internal and external burns exist, principal diagnosis depends on admission circumstances.",
+          "burns_with_related_conditions": "When burns and related conditions (e.g., smoke inhalation, respiratory failure) are present, principal diagnosis depends on admission circumstances."
+        },
+        "Burns of the same anatomic site": "Classify to the subcategory for the highest degree at the site/side (e.g., T24.311- for 2nd and 3rd degree right thigh).",
+        "Non-healing burns": "Code as acute burns; necrosis of burned skin = non-healed burn.",
+        "Infected burn": "Assign an additional code for the infection.",
+        "Assign separate codes for each burn site": "Assign separate codes per site. Avoid T30 (unspecified body region) unless sites are not specified. Use 'multiple sites' only if individual sites not documented.",
+        "Extent of body surface involved (T31/T32)": {
+          "usage": "Use for acute burns/corrosions when site not specified or for additional data (e.g., burn unit reporting, ≥20% third-degree). Not for sequelae.",
+          "rule_of_nines": "Head/neck 9%, each arm 9%, each leg 18%, anterior trunk 18%, posterior trunk 18%, genitalia 1%; adjust for infants/children/body habitus as needed."
+        },
+        "Encounters for sequela of burns": "Use burn/corrosion code with 7th character 'S' for late effects (e.g., scars, contractures).",
+        "Sequelae with a late effect code and current burn": "It may be appropriate to assign both a current burn (7th 'A'/'D') and a sequela burn code (7th 'S') on the same record.",
+        "External cause code with burns/corrosions": "Use external cause codes to identify source/intent/place of occurrence."
+      },
+      "Adverse Effects, Poisoning, Underdosing and Toxic Effects": {
+        "combination_codes": "T36–T65 codes combine substance and intent; no additional external cause code required.",
+        "Do not code directly from the Table of Drugs": "Always confirm in the Tabular List.",
+        "Use as many codes as necessary": "Report all applicable substances.",
+        "Same code for multiple events": "If same code describes the causative agent for multiple events, assign once.",
+        "Multiple substances": "Code each substance unless a combination code exists; for multiple unspecified substances use T50.91-.",
+        "Drug toxicity classifications": {
+          "Adverse Effect": "First code the nature of the adverse effect, then the drug adverse effect code (T36–T50 with 5th/6th character '5').",
+          "Poisoning": {
+            "sequence": "First assign T36–T50 poisoning code with intent (accidental, intentional self-harm, assault, undetermined); if unknown, default to accidental; 'undetermined' only if explicitly documented.",
+            "add_manifestations": "Use additional codes for all manifestations.",
+            "abuse_dependence": "If abuse/dependence present, code additionally.",
+            "examples": [
+              "Prescription/admin error by any person → poisoning.",
+              "Intentional overdose → poisoning.",
+              "Nonprescribed drug taken with correctly prescribed/administered drug causing reaction → poisoning.",
+              "Drug–alcohol interaction causing reaction → poisoning."
+            ],
+            "references": ["See Section I.C.4. for insulin pump malfunctions.", "See Section I.B.10. for sequela."]
+          },
+          "Underdosing": {
+            "definition": "Taking less than prescribed or discontinuing against medical advice; code T36–T50 with 5th/6th character '6'.",
+            "documentation": "No change in condition required; documentation of reduced/stopped dose is sufficient.",
+            "principal_rule": "Never principal/first-listed. If relapse/exacerbation occurs, code the medical condition.",
+            "intent_modifiers": "Use Z91.12-, Z91.13-, Z91.14-, Z91.A4- for noncompliance, or Y63.6–Y63.9 for complication of care, as applicable."
+          },
+          "Toxic Effects": {
+            "definition": "Harmful substance exposure (ingested/skin contact) → categories T51–T65.",
+            "sequence": "Assign toxic effect code first, then all associated manifestations.",
+            "intent": "Codes carry intent (accidental, intentional self-harm, assault, undetermined).",
+            "reference": "See Section I.B.10. Sequela."
+          }
+        }
+      },
+      "Adult and child abuse, neglect and other maltreatment": {
+        "sequencing": "Sequence first T74 (confirmed) or T76 (suspected), then any mental health or injury codes.",
+        "confirmed_vs_suspected": "If documentation states abuse/neglect → confirmed (T74.-); if documented as suspected → T76.-.",
+        "external_cause_perpetrator": "For confirmed cases, add assault external cause (X92–Y09) and perpetrator code (Y07) if known. Do not add these for suspected cases.",
+        "ruled_out_encounters": {
+          "physical_abuse": "Z04.71 (adult) or Z04.72 (child).",
+          "rape/sexual_abuse": "Z04.41 (adult) or Z04.42 (child).",
+          "forced_exploitation": "Z04.81 (sexual) or Z04.82 (labor)."
+        },
+        "reference": "See Section I.C.15. Abuse in a pregnant patient."
+      },
+      "Complications of care": {
+        "General guidelines for complications of care": {
+          "Documentation of complications of care": "See Section I.B.16."
+        },
+        "Pain due to medical devices": "Assign appropriate Chapter 19 T code for device-related pain; add G89.18 (acute) or G89.28 (chronic) to specify pain type.",
+        "Transplant complications": {
+          "Transplants other than kidney": "Use T86- for complications/rejection affecting function of the transplanted organ, plus a secondary code identifying the complication. Do not code pre-existing/unrelated conditions as complications unless they affect function.",
+          "references": [
+            "See I.C.21. transplant organ removal status.",
+            "See I.C.2. malignant neoplasm associated with transplanted organ.",
+            "See I.C.1.d.4. sepsis due to infection in transplanted organ."
+          ],
+          "Kidney transplant complications": "Assign T86.1- for documented kidney transplant complications (failure, rejection, other). Do not assign T86.1- solely for CKD post-transplant unless a complication is documented. If unclear, query. For conditions affecting the transplanted kidney (other than CKD), assign T86.1- plus a secondary code for the complication. For CKD post-transplant without complication, see I.C.14.",
+          "kidney_references": ["See I.C.14. CKD and kidney transplant status.", "See I.C.1.d.4. sepsis sequencing in transplanted organ infection."]
+        },
+        "Complication codes that include the external cause": "Some T codes incorporate the external cause and procedure type; no additional external cause code is needed.",
+        "Complications of care codes within the body system chapters": "Use intraoperative/postprocedural complication codes from body system chapters first, followed by specific complication code(s), unless the index directs to a Chapter 19 T code."
+      }
+    }
+  }
+  

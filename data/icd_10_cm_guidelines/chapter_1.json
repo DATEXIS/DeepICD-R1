@@ -1,0 +1,62 @@
+{
+    "Certain Infectious and Parasitic Diseases (A00-B99), U07.1, U09.9": {
+      "Human Immunodeficiency Virus Infections": {
+          "Patient admitted for HIV-related condition": "If a patient is admitted for an HIV-related condition, the principal diagnosis should be B20, Human immunodeficiency virus [HIV] disease followed by additional diagnosis codes for all reported HIV-related conditions. Exception: If the reason for admission is hemolytic-uremic syndrome associated with HIV disease, assign code D59.31 followed by B20.",
+          "Patient with HIV disease admitted for unrelated condition": "If a patient with HIV disease is admitted for an unrelated condition, the unrelated condition should be principal diagnosis. B20 and other HIV-related conditions should be listed as additional diagnoses.",
+          "Whether the patient is newly diagnosed": "New or previous diagnosis does not affect sequencing decision.",
+          "Asymptomatic human immunodeficiency virus": "Z21 is used when patient is HIV positive but asymptomatic. Do not use Z21 if AIDS, HIV disease, or HIV-related illness is documented; use B20 instead.",
+          "Patients with inconclusive HIV serology": "Assign R75 when serology is inconclusive with no definitive diagnosis or manifestations.",
+          "Previously diagnosed HIV-related illness": "Once diagnosed with an HIV-related illness, always code B20 in subsequent encounters. Never assign R75 or Z21 in these cases.",
+          "HIV Infection in Pregnancy, Childbirth and the Puerperium": "Principal code O98.7- for HIV illness complicating pregnancy, followed by B20 and related illness codes. For asymptomatic HIV in pregnancy, use O98.7- and Z21.",
+          "Encounters for testing for HIV": "Z11.4 for screening. Code signs/symptoms if present. Z71.7 for counseling. Negative results use Z71.7; positive results follow HIV guidelines.",
+          "HIV managed by antiretroviral medication": "B20 for HIV disease, plus Z79.899 for long-term antiretroviral use.",
+          "Encounter for HIV Prophylaxis Measures": "Z29.81 for HIV pre-exposure prophylaxis (PrEP), plus codes for risk factors."
+      },
+      "Infectious agents as the cause of diseases classified to other chapters": "Use additional codes from B95-B97 to identify organism when infection code does not specify it.",
+      "Infections resistant to antibiotics": "Assign Z16 code for resistance after infection code if resistance is not identified there.",
+      "Sepsis, Severe Sepsis, and Septic Shock": {
+        "Negative or inconclusive blood cultures and sepsis": "Negative cultures do not rule out sepsis if clinically evident.",
+        "Urosepsis": "Term is nonspecific; query provider.",
+        "Sepsis with organ dysfunction": "Follow severe sepsis coding if organ dysfunction present.",
+        "Acute organ dysfunction not clearly associated with sepsis": "Do not code as severe sepsis unless linked; query if unclear.",
+        "Severe sepsis": "Requires code for infection, R65.2, and organ dysfunction code(s). Query if unclear.",
+        "Septic shock": "Sequence systemic infection first, then R65.21 or T81.12. Include other organ dysfunction codes.",
+        "Sepsis or severe sepsis with a localized infection": "If sepsis reason for admission, code systemic infection first, then localized infection. Reverse if localized infection first.",
+        "Sepsis due to a postprocedural infection": "Code surgical wound infection first, then T81.44 or O86.04, plus infectious agent. Add R65.2 if severe.",
+        "Postprocedural infection and postprocedural septic shock": "Use T81.12 after infection codes; do not assign R65.21.",
+        "Sepsis and severe sepsis associated with a noninfectious process": "Sequence based on principal diagnosis definition. Use only one R65 code; assign R65.2 if severe sepsis results.",
+        "Sepsis and septic shock complicating abortion, pregnancy, childbirth, and the puerperium": "See Section I.C.15.",
+        "Newborn sepsis": "See Section I.C.16.f.",
+        "Hemolytic-uremic syndrome associated with sepsis": "D59.31 as principal, infection and other conditions secondary."
+        },
+      "Methicillin Resistant Staphylococcus aureus (MRConditions": {
+        "Selection and sequencing of MRSA codes": {
+          "Combination codes for MRSA infection": "Use combination code; do not add B95.62 or Z16.11.",
+          "Other codes for MRSA infection": "Use condition code plus B95.62; do not use Z16.11.",
+          "Methicillin susceptible Staphylococcus aureus (MSand MRSA colonization": "Z22.322 for MRSA colonization; Z22.321 for MSSA colonization.",
+          "MRSA colonization and infection": "Assign both Z22.322 and MRSA infection code."
+        }
+      },
+      "Zika virus infections": {
+        "Code only confirmed cases": "Assign A92.5 for confirmed cases based on provider documentation. For suspected/possible/probable, code symptoms or Z20.821."
+      },
+      "Coronavirus infections": {
+          "Acute respiratory manifestations of COVID-19": {
+            "Pneumonia": "U07.1 + J12.82",
+            "Acute bronchitis": "U07.1 + J20.8; use J40 if NOS",
+            "Lower respiratory infection": "U07.1 + J22; use J98.8 if NOS respiratory infection",
+            "Acute respiratory distress syndrome": "U07.1 + J80",
+            "Acute respiratory failure": "U07.1 + J96.0-"
+          },
+          "Non-respiratory manifestations of COVID-19": "U07.1 + manifestation codes.",
+          "Exposure to COVID-19": "Z20.822 for exposure (asymptomatic or symptomatic with ruled-out infection).",
+          "Screening for COVID-19": "Z11.52",
+          "Signs and symptoms without definitive diagnosis of COVID-19": "Code each symptom (e.g., R05.1, R05.9, R06.02, R50.9). Add Z20.822 if exposure.",
+          "Asymptomatic individuals who test positive for COVID-19": "Code U07.1.",
+          "Personal history of COVID-19": "Z86.16",
+          "Follow-up visits after COVID-19 infection has resolved": "Z09 + Z86.16 if no residual symptoms; see other guidelines if symptoms present.",
+          "Encounter for antibody testing": "Z01.84 unless testing to confirm active infection or as follow-up."
+      }
+    }
+  }
+  

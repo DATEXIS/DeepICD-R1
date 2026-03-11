@@ -1,0 +1,45 @@
+{
+    "Diseases of the Circulatory System (I00-I99)": {
+      "Hypertension": {
+        "description": "The classification presumes a causal relationship between hypertension and heart involvement, and between hypertension and kidney involvement, when linked by the term 'with' in the Alphabetic Index, unless documentation clearly states they are unrelated. For other conditions, provider documentation must link them to hypertension to code as related.",
+        "Hypertension with Heart Disease": "Assign code from I11 (Hypertensive heart disease) when hypertension and heart conditions (I50.-, I51.4–I51.7, I51.89, I51.9) coexist. Add code(s) from I50 for type(s) of heart failure if present. If documented as unrelated, code separately and sequence per encounter circumstances.",
+        "Hypertensive Chronic Kidney Disease": "Assign from I12 when hypertension and CKD (N18) are present, unless provider states CKD is unrelated. Add N18 code for CKD stage. If acute renal failure present, also code it. Sequence per encounter circumstances.",
+        "Hypertensive Heart and Chronic Kidney Disease": "Assign from I13 when both heart and kidney involvement are present. Add I50 code for heart failure if present, and N18 code for CKD stage. Do not assign I11 or I12 separately. If acute renal failure present, also code it.",
+        "Hypertensive Cerebrovascular Disease": "Assign I60–I69 first, then appropriate hypertension code.",
+        "Hypertensive Retinopathy": "Assign H35.0 with a hypertension code (I10–I15). Sequence based on encounter reason.",
+        "Hypertension, Secondary": "Assign two codes: one for underlying cause and one from I15 for hypertension. Sequence per encounter reason.",
+        "Hypertension, Transient": "Assign R03.0 unless established hypertension diagnosis exists. For pregnancy, assign O13.- or O14.- as appropriate.",
+        "Hypertension, Controlled": "Assign appropriate code from I10–I15 for existing hypertension under control.",
+        "Hypertension, Uncontrolled": "Assign appropriate code from I10–I15, whether untreated or not responding to therapy.",
+        "Hypertensive Crisis": "Assign I16 for hypertensive urgency/emergency/unspecified crisis. Code also any hypertensive disease (I10–I15). Sequence per encounter reason.",
+        "Pulmonary Hypertension": "Assign from I27. For secondary pulmonary hypertension (I27.1, I27.2-), also code associated conditions/adverse effects of drugs/toxins. Sequence per encounter reason, except adverse effects (see Section I.C.19.e).",
+        "Hypertension, Resistant": "Assign I1A.0 as additional code when resistant hypertension is documented. Sequence code for specific hypertension type first, if known."
+      },
+      "Atherosclerotic Coronary Artery Disease and Angina": {
+        "description": "Combination codes exist for atherosclerotic heart disease with angina (I25.11, I25.7). No separate angina code needed. A causal relationship is assumed unless documentation specifies another cause.",
+        "AMI sequencing": "If CAD patient is admitted for AMI, sequence AMI before CAD."
+      },
+      "Intraoperative and Postprocedural Cerebrovascular Accident": {
+        "description": "Medical record must document cause-and-effect between procedure and CVA. Code assignment depends on infarction vs hemorrhage, timing (intraoperative vs postoperative), and type of procedure if hemorrhage."
+      },
+      "Sequelae of Cerebrovascular Disease": {
+        "Category I69": "Used to indicate conditions classifiable to I60–I67 as causes of neurologic deficits (late effects). Deficits may arise anytime after onset.",
+        "Laterality defaults": [
+          "Ambidextrous → dominant",
+          "Left side affected → non-dominant",
+          "Right side affected → dominant"
+        ],
+        "I69 with I60–I67": "Codes from I69 may be assigned with I60–I67 if current CV disease and old CV disease deficits coexist.",
+        "I69 with Z86.73": "Do not assign I69 if no neurologic deficits. See Section I.C.21.4 for personal history code use."
+      },
+      "Acute Myocardial Infarction (AMI)": {
+        "Type 1 STEMI/NSTEMI": "I21.0–I21.2, I21.3 for STEMI; I21.4 for NSTEMI/nontransmural. If NSTEMI evolves to STEMI, code STEMI; if STEMI converts to NSTEMI after therapy, still code STEMI. Use I21 for ≤4 weeks old AMI. After 4 weeks, use aftercare code; for old/healed, use I25.2.",
+        "Acute MI unspecified": "I21.9 is default for unspecified AMI/type. If only STEMI documented without site, use I21.3.",
+        "Nontransmural/subendocardial with site": "Still coded as subendocardial AMI.",
+        "Subsequent AMI": "I22 used with I21 when new type 1/unspecified AMI occurs within 4 weeks of initial AMI. Do not use I22 for type 2, 4, or 5 AMI—assign respective I21.A1 or I21.A9. If new AMI of different type occurs, code each with I21; do not assign I22.",
+        "Other Types": "Type 2 → I21.A1 (underlying cause first, if applicable). Types 3, 4a–4c, 5 → I21.A9. Do not assign I24.89 for demand ischemia.",
+        "Myocardial Infarction with Coronary Microvascular Dysfunction": "Assign I21.B for MI with coronary microvascular disease/dysfunction or MINOCA with microvascular disease."
+      }
+    }
+  }
+  

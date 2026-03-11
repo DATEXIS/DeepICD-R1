@@ -1,0 +1,29 @@
+FROM verlai/verl:base-verl0.5-preview-cu128-cudnn9.8-torch2.7.1-fa2.8.0
+RUN apt update && DEBIAN_FRONTEND="noninteractive" apt install -y openssh-server ssh git tmux && apt-get autoremove -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /var/run/sshd &&\
+    touch /root/.ssh/authorized_keys
+
+
+COPY sshd_config /etc/ssh/sshd_config
+EXPOSE 22
+
+#RUN sed -i '/numba/d' /etc/pip/constraint.txt
+#RUN sed -i '/llvmlite/d' /etc/pip/constraint.txt
+
+ENV TORCH_CUDA_ARCH_LIST="9.0+PTX;10.0+PTX"
+ENV VLLM_FA_CMAKE_GPU_ARCHES="90-real;100-real"
+
+
+RUN pip install accelerate codetiming datasets dill hydra-core tensordict torchdata transformers \
+    numpy pandas peft pyarrow>=15.0.0 pybind11 pylatexenc ray[all] wandb meilisearch glances gpustat
+
+RUN pip install git+https://github.com/volcengine/verl.git --no-dependencies
+
+RUN pip install openai vllm
+RUN pip install torchmetrics plotly
+WORKDIR /workdir
+COPY /src .
+CMD ["/usr/sbin/sshd", "-D"]

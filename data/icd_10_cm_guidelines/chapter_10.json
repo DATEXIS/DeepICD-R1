@@ -1,0 +1,29 @@
+{
+    "Diseases of the Respiratory System (J00-J99), U07.0": {
+      "Chronic Obstructive Pulmonary Disease (COPD) and Asthma": {
+        "Acute exacerbation of chronic obstructive bronchitis and asthma": "Codes in J44 and J45 distinguish uncomplicated cases from those in acute exacerbation. An acute exacerbation is a worsening or decompensation of a chronic condition, not equivalent to a superimposed infection (though it may be triggered by one)."
+      },
+      "Acute Respiratory Failure": {
+        "Acute respiratory failure as principal diagnosis": "A code from J96.0 (Acute respiratory failure) or J96.2 (Acute and chronic respiratory failure) may be principal when it is the condition chiefly responsible for the admission, unless chapter-specific sequencing rules apply.",
+        "Acute respiratory failure as secondary diagnosis": "May be listed second if it occurs after admission or is present on admission but is not the principal diagnosis.",
+        "Sequencing of acute respiratory failure and another acute condition": "When admitted with both respiratory failure and another acute condition, principal diagnosis depends on admission circumstances. If equally responsible and no specific sequencing rules apply, follow Section II.C for multiple principal diagnoses. Query provider if unclear."
+      },
+      "Influenza due to certain identified influenza viruses": {
+        "Confirmed influenza coding": "Code only confirmed cases of influenza due to certain identified viruses (J09) or other identified influenza virus (J10). Confirmation does not require lab results; provider's diagnostic statement suffices.",
+        "Strain examples": "Category J09: avian influenza, novel influenza A. Category J10: identified strain such as H1N1, H3N2 (not novel/variant).",
+        "Unconfirmed influenza": "If documented as suspected/possible/probable, assign J11 (influenza due to unidentified virus). Do not assign J09 or J10."
+      },
+      "Ventilator Associated Pneumonia": {
+        "Documentation requirement": "Assign J95.851 only when provider documents ventilator associated pneumonia (VAP). Add code for organism if identified. Do not assign J12–J18 for pneumonia type in VAP cases.",
+        "Not VAP": "Do not assign J95.851 when pneumonia is present in a ventilated patient without explicit provider documentation linking it to the ventilator. Query provider if unclear.",
+        "VAP develops after admission": "If admitted with another pneumonia type and later develops VAP, code the original pneumonia (J12–J18) as principal, and J95.851 as additional when documented."
+      },
+      "Vaping-related disorders": {
+        "Primary coding": "Assign U07.0 as principal diagnosis for vaping-related conditions. For vaping-related lung injury, assign only U07.0.",
+        "Additional coding": "Assign additional codes for other manifestations (e.g., acute respiratory failure J96.0-, pneumonitis J68.0).",
+        "Exclusions": "Do not code separately for respiratory signs/symptoms (e.g., cough, shortness of breath) when a definitive vaping diagnosis exists. GI symptoms (e.g., diarrhea, abdominal pain) may be coded separately.",
+        "Reference": "See Section I.C.1.g.1.c.i for pneumonia confirmed as due to COVID-19."
+      }
+    }
+  }
+  

@@ -1,0 +1,150 @@
+{
+    "Chapter 21: Factors Influencing Health Status and Contact with Health Services (Z00–Z99)": {
+      "General Use": {
+        "settings": "Applicable in any healthcare setting.",
+        "principal_or_secondary": "May be used as principal or secondary diagnosis, depending on encounter context.",
+        "first_listed_only": "Some Z codes may be reported only as principal/first-listed.",
+        "procedure_codes": "Z codes are not procedure codes—must accompany procedure code if procedure performed."
+      },
+      "Categories": {
+        "Contact_or_Exposure": {
+          "Z20": "Contact/suspected exposure to communicable diseases.",
+          "Z77": "Other contact/exposure hazardous to health.",
+          "usage": "May be first-listed (e.g., for testing) or secondary (e.g., risk factor)."
+        },
+        "Inoculations_and_Vaccinations": {
+          "Z23": "Encounter for inoculations/vaccinations.",
+          "note": "Requires procedure codes for administration/type; may be secondary if routine."
+        },
+        "Status_Codes": {
+          "purpose": "Indicate carrier state, residual effects, or presence of devices.",
+          "distinct_from_history": "History code = condition no longer exists; status = ongoing state.",
+          "avoid_redundancy": "Do not code if included in diagnosis code.",
+          "examples": {
+            "Z14": "Genetic carrier",
+            "Z15": "Genetic susceptibility (never principal)",
+            "Z16": "Antimicrobial resistance (infection code first)",
+            "Z17": "Hormone receptor status",
+            "Z18": "Retained foreign body fragments",
+            "Z19": "Hormone sensitivity malignancy status",
+            "Z21": "Asymptomatic HIV infection status",
+            "Z22": "Carrier of infectious disease",
+            "Z28.3": "Underimmunization status",
+            "Z33.1": "Pregnant state, incidental (secondary only)",
+            "Z66": "Do not resuscitate",
+            "Z67": "Blood type",
+            "Z68": "BMI (with associated diagnosis; not in pregnancy)",
+            "Z74.01": "Bed confinement status",
+            "Z76.82": "Awaiting organ transplant status",
+            "Z78": "Other specified health status",
+            "Z79": "Long-term drug therapy (not for addiction/short-term use)",
+            "Z88": "Allergy to drugs (except Z88.9)",
+            "Z89–Z90": "Acquired absence of limb/organs",
+            "Z91.0–Z91.9": "Allergy status to non-drug substances",
+            "Z92.82": "Status post tPA within last 24h (receiving facility only)",
+            "Z93–Z99": "Dependence on devices (no complications)"
+          }
+        },
+        "History_Codes": {
+          "types": ["Personal", "Family"],
+          "personal": "Past condition, no treatment, potential for recurrence.",
+          "family": "Relative had condition, increasing risk.",
+          "use": "May accompany follow-up/screening codes; sequenced after reason for encounter.",
+          "categories": {
+            "Z80": "Family history of malignant neoplasm",
+            "Z81": "Family history of mental/behavioral disorders",
+            "Z82": "Family history of disabilities/chronic diseases",
+            "Z83": "Family history of other specific disorders",
+            "Z84": "Family history of other conditions",
+            "Z85": "Personal history of malignant neoplasm",
+            "Z86": "Personal history of other diseases",
+            "Z87": "Personal history of other conditions",
+            "Z91.4–Z91.85": "Personal history of trauma, self-harm, falling, military service",
+            "Z92": "Personal history of medical treatment (except contraception, tPA)"
+          }
+        },
+        "Screening": {
+          "definition": "Testing well individuals for early disease detection.",
+          "rules": "First-listed if screening is main reason; additional if done with other visits; not used for diagnostic exams.",
+          "procedure_code_required": "Yes, to confirm performance.",
+          "categories": {
+            "Z11": "Screening for infectious/parasitic diseases",
+            "Z12": "Screening for malignant neoplasms",
+            "Z13": "Screening for other diseases/disorders (except Z13.9 unspecified)",
+            "Z36": "Antenatal screening for mother"
+          }
+        },
+        "Observation": {
+          "purpose": "Used when suspected condition ruled out; limited use.",
+          "rules": "Not for confirmed conditions or if symptoms/injury present.",
+          "categories": {
+            "Z03": "Observation for suspected disease ruled out",
+            "Z04": "Examination/observation for other reasons (except Z04.9 unspecified)",
+            "Z05": "Observation of newborn for suspected condition ruled out"
+          }
+        },
+        "Aftercare": {
+          "definition": "Continued care after initial treatment completed.",
+          "exclusions": "Not for active treatment or injury aftercare.",
+          "exceptions": ["Z51.0", "Z51.1–"],
+          "categories": [
+            "Z42", "Z43", "Z44", "Z45", "Z46", "Z47", "Z48",
+            "Z49", "Z51"
+          ]
+        },
+        "Follow_up": {
+          "definition": "Surveillance after completed treatment; condition no longer exists.",
+          "sequence": "Follow-up code first, history code second.",
+          "categories": {
+            "Z08": "Follow-up after malignant neoplasm treatment",
+            "Z09": "Follow-up after other condition treatment",
+            "Z39": "Maternal postpartum care"
+          }
+        },
+        "Donor": {
+          "Z52": "Donors of organs/tissues (living only; not cadaveric)"
+        },
+        "Counseling": {
+          "definition": "Assistance after illness/injury or for social/family issues.",
+          "categories": [
+            "Z30.0–", "Z31.5–Z31.6", "Z32.2–Z32.3", "Z69", "Z70", "Z71", "Z76.81"
+          ]
+        },
+        "Obstetrical_and_Reproductive": {
+          "note": "Used when no OB complications present.",
+          "key_codes": ["Z30", "Z31", "Z32.2", "Z32.3", "Z33", "Z34", "Z36", "Z3A", "Z37", "Z39", "Z76.81"]
+        },
+        "Newborn_and_Infant": {
+          "codes": ["Z76.1", "Z00.1–", "Z38"]
+        },
+        "Routine_and_Administrative_Exams": {
+          "rules": "Not used for diagnosis/treatment visits.",
+          "abnormal_findings": "Code based on findings known at coding time.",
+          "categories": ["Z00", "Z01", "Z02", "Z32.0–"]
+        },
+        "Miscellaneous": {
+          "examples": [
+            "Z28", "Z29", "Z40", "Z41", "Z53", "Z72–Z76", "Z91.1–Z91.89"
+          ]
+        },
+        "Nonspecific": {
+          "examples": [
+            "Z02.9", "Z04.9", "Z13.9", "Z41.9", "Z52.9", "Z86.59", "Z88.9", "Z92.0"
+          ]
+        },
+        "Principal_Only": {
+          "list": [
+            "Z00", "Z01", "Z02", "Z04", "Z33.2", "Z31.81", "Z31.83", "Z31.84", "Z34", "Z39", "Z38", "Z40", "Z42", "Z51.0", "Z51.1–", "Z52", "Z76.1", "Z76.2", "Z99.12"
+          ]
+        },
+        "Social_Determinants_of_Health": {
+          "definition": "Social factors influencing health.",
+          "sources": "May be based on provider or non-provider documentation (if signed-off).",
+          "categories": [
+            "Z55", "Z56", "Z57", "Z58", "Z59", "Z60", "Z62", "Z63", "Z64", "Z65"
+          ]
+        }
+      }
+    }
+  }
+  

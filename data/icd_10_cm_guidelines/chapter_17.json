@@ -1,0 +1,26 @@
+{
+    "Congenital malformations, deformations, and chromosomal abnormalities (Q00-Q99)": {
+      "Code Assignment": {
+        "rule": "Assign code(s) from Q00-Q99 when a congenital malformation, deformation, or chromosomal abnormality is documented.",
+        "principal_or_secondary": "May be assigned as principal/first-listed diagnosis or secondary diagnosis."
+      },
+      "When No Unique Code Exists": {
+        "rule": "Assign additional code(s) for any present manifestations if there is no unique code for the anomaly."
+      },
+      "Coding Manifestations": {
+        "rule": "Do not code separately manifestations that are inherent components of the anomaly when the code identifies the anomaly.",
+        "exception": "Assign additional codes for manifestations not inherent to the anomaly."
+      },
+      "Use Throughout Life": "Chapter 17 codes may be used throughout the patient’s life.",
+      "Corrected Anomalies": {
+        "rule": "If malformation or deformity has been corrected, use a personal history code to identify history."
+      },
+      "Late Identification": {
+        "rule": "If anomaly is identified later in life, assign Q00-Q99 code when diagnosed by provider."
+      },
+      "Birth Admission Sequencing": {
+        "rule": "For birth admission, assign appropriate Z38 code first, followed by Q00-Q99 codes for congenital anomalies."
+      }
+    }
+  }
+  

@@ -1,0 +1,133 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: clinical-qwen2p5-7b-o-f-lm-mimic-only2
+  labels:
+    app: clinical-qwen2p5-7b-o-f-lm-mimic-only2
+spec:
+  template:
+    metadata:
+      labels:
+        app: clinical-qwen2p5-7b-o-f-lm-mimic-only2
+    spec:
+      containers:
+        - name: llm-grpo-training-icd10-qwen2p5
+          image: registry.datexis.com/troehr/verl_base
+          command: [
+            "python3", "-m", "verl.trainer.main_ppo",
+              "algorithm.adv_estimator=grpo",
+              "data.train_files=/pvc/mimic-iv/icd10_standard_prospective/train_prospective_icd_coding.parquet",
+              "data.val_files=/pvc/mimic-iv/icd10_standard_prospective/val_prospective_icd_coding.parquet",
+              "data.filter_overlong_prompts=True",
+              "data.truncation='right'",
+              "data.train_batch_size=128",
+              "data.max_prompt_length=2048",
+              "data.max_response_length=1024",
+              "actor_rollout_ref.model.path=Qwen/Qwen2.5-7B-Instruct",
+              "actor_rollout_ref.actor.optim.lr=1e-6",
+              "actor_rollout_ref.actor.optim.lr_warmup_steps=50",
+              "actor_rollout_ref.model.use_remove_padding=True",
+              "actor_rollout_ref.actor.use_kl_loss=False",
+              "actor_rollout_ref.actor.kl_loss_coef=0.001",
+              "actor_rollout_ref.actor.kl_loss_type=low_var_kl",
+              "actor_rollout_ref.actor.use_torch_compile=True",
+              "actor_rollout_ref.model.enable_gradient_checkpointing=True",
+              "actor_rollout_ref.actor.fsdp_config.param_offload=False",
+              "actor_rollout_ref.actor.fsdp_config.optimizer_offload=False",
+              "actor_rollout_ref.actor.ppo_mini_batch_size=128",
+              "actor_rollout_ref.actor.ppo_micro_batch_size_per_gpu=16",
+              "actor_rollout_ref.rollout.log_prob_micro_batch_size_per_gpu=16",
+              "actor_rollout_ref.ref.log_prob_micro_batch_size_per_gpu=16",
+              "actor_rollout_ref.rollout.tensor_model_parallel_size=1",
+              "actor_rollout_ref.rollout.name=vllm",
+              "actor_rollout_ref.rollout.top_k=-1",
+              "actor_rollout_ref.rollout.dtype=bfloat16",
+              "actor_rollout_ref.rollout.enforce_eager=False",
+              "actor_rollout_ref.rollout.free_cache_engine=False",
+              "actor_rollout_ref.rollout.gpu_memory_utilization=0.4",
+              "actor_rollout_ref.rollout.n=8",
+              "actor_rollout_ref.ref.fsdp_config.param_offload=False",
+              "actor_rollout_ref.rollout.temperature=0.9",
+              "actor_rollout_ref.actor.entropy_coeff=0.001",
+              "reward_model.reward_manager=batch",
+              "algorithm.kl_ctrl.kl_coef=0.001",
+              "trainer.logger=['console', 'wandb' ]",
+              "trainer.project_name='r1-zero-experiments'",
+              "trainer.experiment_name=clinical-qwen2p5-7b-o-f-lm-mimic-only2",
+              "trainer.default_local_dir=/pvc/verl-checkpoints/clinical-qwen2p5-7b-o-f-lm-mimic-only2",
+              "trainer.n_gpus_per_node=8",
+              "trainer.nnodes=1",
+              "trainer.save_freq=20",
+              "trainer.test_freq=20",
+              "trainer.total_epochs=15",
+              "trainer.log_val_generations=5",
+              "trainer.val_before_train=False",
+              "custom_reward_function.path=/workdir/rewards.py",
+              "custom_reward_function.name=verl_batched_compute_score_multiple_think_traces_and_length"
+          ]
+          envFrom:
+            - secretRef:
+                name: tom-hf-token
+            - secretRef:
+                name: datexis-wandb-api-key
+          env:
+            - name: LANG
+              value: 'C.UTF-8'
+            - name: TOKENIZERS_PARALLELISM
+              value: 'true'
+            - name: NCCL_DEBUG
+              value: 'INFO'
+            - name: HF_HOME
+              value: "/models"
+            - name: HYDRA_FULL_ERROR
+              value: "1"
+            - name: HF_HUB_ENABLE_HF_TRANSFER
+              value: "1"
+            - name: VLLM_ENDPOINT
+              value: "http://grpo-judge-vllm.clinibench.svc.cluster.local:8000/v1"
+            - name: JUDGE_MODEL_NAME
+              value: "meta-llama/Llama-3.1-70B-Instruct"
+            - name: ACTIVATE_OUTCOME_REWARD
+              value: "True"
+            - name: ACTIVATE_FORMAT_REWARD
+              value: "True"
+            - name: GUIDELINES_FILE
+              value: "/pvc/data/icd10_cm_guidelines_chapters_with_null_roman_ids.json"
+            - name: JUDGE_RAG_ENABLED
+              value: "True"
+            - name: JUDGE_PROMPT_FILE
+              value: "/workdir/prompts/llm_judge_rag_prompt.json"
+            - name: MEILISEARCH_URL
+              value: "http://meilisearch.clinibench.svc.cluster.local:7700"
+            - name: MEILI_ICD_INDEX
+              value: "mimic_icd_10_codes"
+
+          resources:
+            requests:
+              cpu: "1"
+              nvidia.com/gpu: "8"
+            limits:
+              nvidia.com/gpu: "8"
+              memory: 1Ti
+          volumeMounts:
+            - name: dshm
+              mountPath: /dev/shm
+            - name: clinical-r1-pvc
+              mountPath: /pvc
+            - name: model-volume
+              mountPath: /models
+      nodeSelector:
+        kubernetes.io/hostname: cl-worker36
+      volumes:
+        - name: clinical-r1-pvc
+          persistentVolumeClaim:
+            claimName: clinical-r1-pvc
+        - name: model-volume
+          persistentVolumeClaim:
+            claimName: model-volume
+        - name: dshm
+          emptyDir:
+            medium: Memory
+      imagePullSecrets:
+        - name: private-registry-auth
+      restartPolicy: Never

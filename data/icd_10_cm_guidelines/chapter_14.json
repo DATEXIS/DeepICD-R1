@@ -1,0 +1,24 @@
+{
+    "Diseases of Genitourinary System (N00-N99)": {
+      "Chronic kidney disease": {
+        "Stages of chronic kidney disease (CKD)": {
+          "description": "CKD is classified by severity into stages 1–5. N18.2 = mild CKD (stage 2); N18.30–N18.32 = moderate CKD (stage 3); N18.4 = severe CKD (stage 4); N18.6 = ESRD.",
+          "ESRD rule": "If both a stage and ESRD are documented, assign only N18.6."
+        },
+        "Chronic kidney disease and kidney transplant status": {
+          "description": "Post-kidney transplant patients may still have CKD due to incomplete restoration of kidney function. CKD alone is not a transplant complication.",
+          "coding": "Assign appropriate N18 code for CKD stage and Z94.0 for kidney transplant status. For complications such as failure/rejection, see Section I.C.19.g.",
+          "documentation_unclear": "Query provider if unclear whether CKD is due to a transplant complication."
+        },
+        "Chronic kidney disease with other conditions": {
+          "description": "CKD often coexists with serious conditions like diabetes mellitus and hypertension.",
+          "sequencing": "Sequence CKD code in relation to other conditions based on Tabular List conventions.",
+          "references": [
+            "See Section I.C.9: Hypertensive chronic kidney disease.",
+            "See Section I.C.19: Chronic kidney disease and kidney transplant complications."
+          ]
+        }
+      }
+    }
+  }
+  

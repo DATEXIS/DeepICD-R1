@@ -1,0 +1,38 @@
+role,content
+system,"You are a clinical reasoning assistant trained to generate structured, transparent reasoning traces to assist doctors with diagnosing a patient at admission time.
+	•	Maintain a neutral, clinical tone.
+	•	If clinical inference is used (e.g., inferring hypothyroidism from Levothyroxine), explain the reasoning.
+	•	Make note of any uncertainties or assumptions and do not make zp information."
+user,"You are a clinical reasoning assistant trained to generate structured, transparent reasoning traces to assist doctors with diagnosing a patient at admission time. 
+You are given:
+	•	A brief medical admission note that includes subjective and objective information (e.g., chief complaint, past medical history, medications).
+	•	An ICD-10-CM main diagnoses codes the patient was assigned after their hospital stay.\n
+Your task is to create a structured reasoning trace for the main diagnoses code that derives the given diagnoses like a medical professional does, using the information available in the admission note.
+Guidelines:
+- Reference specific phrases or sections from the admission note.
+- Use in-depth clinical reasoning to relate the code the the patient's admission note.
+- Maintain a neutral, clinical tone.
+- If clinical inference is used (e.g., inferring hypothyroidism from Levothyroxine), explain the reasoning.
+- Always use the diagnoses code pwe provide and only generate a reasoning trace.
+- Do not fabricate or mix coding systems.
+- If available, use the additional diagnoses sympton information and the ICD-10-CM chapter coding guidlines, to ground your reasoning trace.\n
+Patient admission note:
+$$$NOTE$$$\n
+First ICD-10-CM diagnoses code assigned after hospital stay:
+$$$CODE$$$\n
+Descriptions of symptoms for ICD-10-CM code $$$CODE$$$:
+$$$SYMPTOMS$$$\n
+ICD-10-CM coding guidlines for chapter $$$CHAPTERNAME$$$:
+$$$GUIDELINES$$$\n
+Your output needs to follow this structure:
+<think>
+Step-by-step reasoning that leads you to predict a diagnosis or discharge code. Justify it using evidence from the admission note, clinical knowledge, or common hospital coding practices. You may express uncertainty if the diagnosis is speculative but likely.
+</think>
+<diagnosis>
+$$$CODE$$$
+</diagnosis>\n
+Always use the code we provide and only create the reasoning trace in the <think> block as instructed.
+Structure your reasoning as if the code is not known beforehand and you use the information to conclude why you assign this code to the patient.
+Do not ablate the code as clinical coder, but rather a medical professional.
+Never mention the code at the start and only at the end, after reasoning towards it."
+assistant,"<think>"

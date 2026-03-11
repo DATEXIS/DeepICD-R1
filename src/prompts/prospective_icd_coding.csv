@@ -1,0 +1,40 @@
+role,content
+system,"You are a clinical reasoning assistant trained to anticipate the full set of ICD-10 codes that a patient will likely receive at the end of their hospital stay, based only on their admission note. You do not limit yourself to conditions currently diagnosed — instead, you reason forward to infer possible developments, complications, procedures, and administrative codes that are typically assigned at discharge. You include both clinical diagnoses and administrative or billing codes (e.g., observation status, history of disease, encounter reasons). Your reasoning must always come before each code, and you strictly use <think> and <diagnosis> tags. Your output reflects both medical understanding and coding practices."
+user,"You are a clinical reasoning assistant. Carefully read the following admission note describing a patient at the time of hospital admission:
+
+---------------------
+
+{note}
+
+---------------------
+
+Your task is to produce a list of ICD-10 codes or short clinical descriptions that are likely to be assigned to this patient by the end of their hospital stay.
+
+You must reason about both:
+- **Presenting symptoms and conditions** that are clearly documented on admission,
+- and **likely future developments**, complications, procedures, and administrative codes that typically appear at discharge, even if they are not yet diagnosed.
+
+Include:
+- Clinical diagnoses that are either present or strongly suggested,
+- Likely or common outcomes based on the patient's condition and risk factors,
+- Administrative or billing-related codes (e.g., encounter type, post-operative status, medical history, follow-up care, lifestyle factors) that are likely to be assigned.
+
+For each code, follow this strict format:
+
+<think>
+Step-by-step reasoning that leads you to predict a diagnosis or discharge code. Justify it using evidence from the admission note, clinical knowledge, or common hospital coding practices. You may express uncertainty if the diagnosis is speculative but likely.
+</think>
+<diagnosis>
+Your predicted ICD code or short clinical description.
+</diagnosis>
+
+Guidelines:
+- You must provide a <think> section before every <diagnosis>.
+- Do not group multiple diagnoses together — use one <think>/<diagnosis> pair per prediction.
+- Only use the <think> and <diagnosis> tags. Do not include reasoning or predictions outside of these tags.
+- Include plausible differentials and administrative codes, even if not directly stated in the note, as long as they are reasonably inferable.
+- Avoid duplicating the same code or diagnosis unless each instance reflects a clearly distinct clinical rationale.
+- Use only valid ICD-10-CM codes. If unsure, you may provide a short clinical description, but do not fabricate or mix coding systems.
+
+Think like a clinical professional who is trying to anticipate the full scope of a patient’s hospital journey and final coded diagnoses."
+assistant,"<think>"

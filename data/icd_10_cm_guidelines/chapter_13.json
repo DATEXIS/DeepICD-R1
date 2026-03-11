@@ -1,0 +1,27 @@
+{
+    "Diseases of the Musculoskeletal System and Connective Tissue (M00-M99)": {
+      "Site and laterality": {
+        "description": "Most codes have site and laterality designations, representing the bone, joint, or muscle involved. For conditions usually involving more than one site (e.g., osteoarthritis), a 'multiple sites' code may be available. If not, assign multiple codes for each site involved.",
+        "Bone versus joint": "For some conditions (e.g., avascular necrosis of bone M87, osteoporosis M80, M81), the site designation is the bone, even if the affected portion is at the joint."
+      },
+      "Acute traumatic versus chronic or recurrent musculoskeletal conditions": {
+        "description": "Conditions resulting from healed injury or recurrent issues are usually coded in Chapter 13. Acute, current injuries are coded from Chapter 19. Chronic or recurrent conditions should generally be coded from Chapter 13. Query provider if unclear."
+      },
+      "Coding of Pathologic Fractures": {
+        "7th character A": "Use while the patient is receiving active treatment for the fracture, regardless of whether the provider is new to the case.",
+        "7th character D": "Use for encounters after active treatment is complete and during routine care in the healing or recovery phase.",
+        "Other 7th characters": "Use for subsequent encounters addressing healing problems (e.g., malunions, nonunions, sequelae).",
+        "Complications of surgical treatment": "Code with appropriate complication codes.",
+        "reference": "See Section I.C.19. Coding of traumatic fractures."
+      },
+      "Osteoporosis": {
+        "description": "Osteoporosis is systemic; all bones are affected. In M81 (without pathological fracture), site is not a code component. In M80 (with pathological fracture), the site refers to the fracture location, not the osteoporosis.",
+        "Osteoporosis without pathological fracture": "Use M81 when there is no current pathological fracture, even if the patient had a prior fracture. Follow with Z87.310 for personal history of healed osteoporosis fracture.",
+        "Osteoporosis with current pathological fracture": "Use M80 when a pathologic fracture is present at the time of the encounter. Code for fracture site. Use M80, not traumatic fracture codes, even if fracture followed a minor fall or trauma that would not fracture healthy bone."
+      },
+      "Multisystem Inflammatory Syndrome": {
+        "reference": "See Section I.C.1.g.1.l. for Multisystem Inflammatory Syndrome."
+      }
+    }
+  }
+  

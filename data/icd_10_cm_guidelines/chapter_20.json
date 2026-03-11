@@ -1,0 +1,89 @@
+{
+    "CExternal Causes of Morbidity (V00-Y99)": {
+      "General External Cause Coding Guidelines": {
+        "never_principal": "External cause codes are never sequenced as first-listed/principal diagnosis.",
+        "purpose": "Used to capture cause, intent, place, activity, and status for injury/condition for injury research and prevention strategies.",
+        "mandatory_reporting": "No national requirement; may be required by state or payer. Voluntary reporting encouraged.",
+        "usage_scope": "May be used with any code in A00.0–T88.9, Z00–Z99 representing health condition due to external cause (e.g., infections from external sources, MI during strenuous activity).",
+        "length_of_treatment": {
+          "rule": "Assign external cause code with matching 7th character (A/D/S) for each encounter while condition is treated.",
+          "matching": "Match 7th character of external cause code to 7th character of associated injury/condition code."
+        },
+        "full_range": "Use the full range of codes to describe cause, intent, place, activity, and status.",
+        "multiple_codes": "Assign as many codes as needed to explain each cause; if only one possible, choose the one most related to principal diagnosis.",
+        "selection": "Guided by Alphabetic Index of External Causes and Tabular List notes.",
+        "combination_codes": "Some external cause codes identify sequential events (e.g., fall then striking object); use code matching sequence regardless of severity.",
+        "no_code_needed": "No Chapter 20 external cause code needed if cause and intent included in another chapter's code (e.g., T36.0X1-)."
+      },
+      "Place of Occurrence Guideline": {
+        "category": "Y92",
+        "usage": "Secondary code used after other external cause codes to identify location at time of event.",
+        "once_per_encounter": "Assigned once at initial encounter, unless new injury occurs during hospitalization.",
+        "no_7th_char": "Y92 codes do not use 7th characters.",
+        "avoid_unspecified": "Do not use Y92.9 if place is not stated or not applicable."
+      },
+      "Activity Code Guideline": {
+        "category": "Y93",
+        "usage": "Describes activity at time of event; assign once at initial encounter only.",
+        "not_for": "Not used for poisonings, adverse effects, misadventures, or sequela.",
+        "avoid_unspecified": "Do not assign Y93.9 if activity not stated.",
+        "additional_info": "May be used with cause/intent codes if adds useful detail."
+      },
+      "Place, Activity, and Status Sequencing": {
+        "sequence": "When applicable, sequence after main external cause code(s).",
+        "limit": "Generally one place, one activity, one status code per encounter, except when new injury occurs during hospitalization."
+      },
+      "If Reporting Format Limits Codes": {
+        "priority": "Report cause/intent most related to principal diagnosis first.",
+        "extra_capacity": "If space allows, include causes/intents of additional events before place/activity/status codes."
+      },
+      "Multiple External Cause Coding Guidelines": {
+        "requirement": "Use more than one code if needed to fully describe cause of illness/injury.",
+        "priority_order": [
+          "Child/adult abuse",
+          "Terrorism",
+          "Cataclysmic events",
+          "Transport accidents"
+        ],
+        "activity_and_status": "Assigned after all cause/intent codes.",
+        "first_listed": "Should correspond to cause of most serious diagnosis, following hierarchy."
+      },
+      "Child and Adult Abuse Guideline": {
+        "classification": "Classified as assault.",
+        "perpetrator_code": "If perpetrator known, add Y07 code.",
+        "reference": "See Section I.C.19."
+      },
+      "Unknown or Undetermined Intent Guideline": {
+        "default": "If intent unknown/unspecified, default to accidental.",
+        "transport_accidents": "Assume accidental intent for all transport accident categories.",
+        "undetermined_intent_use": "Use only if documentation specifies that intent cannot be determined."
+      },
+      "Sequelae (Late Effects) of External Cause Guidelines": {
+        "sequela_codes": "Report with 7th character 'S' for late effects; use with any late effect of a prior injury.",
+        "no_current_injury": "Never use with related current injury code.",
+        "subsequent_visits": "Use late effect code for visits treating late effects; do not use for follow-up/rehab when no late effect exists."
+      },
+      "Terrorism Guidelines": {
+        "confirmed_by_FBI": {
+          "usage": "If FBI identifies as terrorism, first-list Y38 code.",
+          "place": "Add Y92 for place of occurrence.",
+          "multiple": "Assign multiple Y38 codes if more than one mechanism."
+        },
+        "suspected": "If suspected but not confirmed, code as assault.",
+        "secondary_effects": {
+          "code": "Y38.9 for conditions occurring after terrorist event.",
+          "exclusion": "Do not assign for conditions due to initial act.",
+          "combination": "May be used with another Y38 code if both initial and subsequent effects exist."
+        }
+      },
+      "External Cause Status": {
+        "category": "Y99",
+        "usage": "Assign with any external cause code (including activity) to indicate work/military/non-work status at event time.",
+        "applicable_to": "Applicable with transport accidents, falls, etc.",
+        "not_applicable_to": "Not used for poisonings, adverse effects, misadventures, or late effects.",
+        "once_only": "Assigned once at initial encounter.",
+        "avoid_unspecified": "Do not use Y99.9 if status not stated."
+      }
+    }
+  }
+  

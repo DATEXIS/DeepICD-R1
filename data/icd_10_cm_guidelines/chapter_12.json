@@ -1,0 +1,20 @@
+{
+    "Diseases of the Skin and Subcutaneous Tissue (L00-L99)": {
+      "Pressure ulcer stage codes": {
+        "Pressure ulcer stages": "Codes in L89 identify site and stage. Stages include 1–4, deep tissue pressure injury, unspecified stage, and unstageable. Assign as many codes as needed to identify all present ulcers. See Section I.B.14 for documentation by clinicians other than the patient's provider.",
+        "Unstageable pressure ulcers": "Assign L89.--0 based on clinical documentation when the stage cannot be clinically determined (e.g., covered by eschar, treated with graft). Do not confuse with L89.--9 for unspecified stage. If stage is revealed after debridement, code only the revealed stage.",
+        "Documented pressure ulcer stage": "Stage assignment should follow provider documentation or Alphabetic Index terms. If terms are absent and stage not documented, query the provider.",
+        "Patients admitted with pressure ulcers documented as healed": "No code assigned if ulcer is completely healed at admission.",
+        "Pressure ulcers documented as healing": "Assign stage code based on documentation. If stage not documented, assign unspecified stage code. Query if unclear whether ulcer is new or healing. If healed at discharge, code for site and stage at admission.",
+        "Patient admitted with pressure ulcer evolving into another stage during the admission": "Assign two codes: one for site/stage on admission and one for same site at highest stage during stay.",
+        "Pressure-induced deep tissue damage": "Assign only L89.--6 for pressure-induced deep tissue damage or deep tissue pressure injury."
+      },
+      "Non-Pressure Chronic Ulcers": {
+        "Patients admitted with non-pressure ulcers documented as healed": "No code assigned if ulcer is completely healed at admission.",
+        "Non-pressure ulcers documented as healing": "Assign non-pressure ulcer code based on severity. If severity not documented, assign unspecified severity. Query if unclear whether ulcer is new or healing. If healed at discharge, code for site/severity at admission.",
+        "Patient admitted with non-pressure ulcer that progresses to another severity level during the admission": "Assign two codes: one for site/severity on admission and one for same site at highest severity during stay.",
+        "Reference": "See Section I.B.14 for documentation by clinicians other than the patient's provider."
+      }
+    }
+  }
+  
